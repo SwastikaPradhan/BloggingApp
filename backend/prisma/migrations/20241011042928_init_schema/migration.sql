@@ -9,14 +9,14 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
-CREATE TABLE "Post" (
-    "id" TEXT NOT NULL,
-    "title" TEXT NOT NULL,
+CREATE TABLE "Blog" (
+    "id" SERIAL NOT NULL,
+    "authorId" INTEGER NOT NULL,
     "content" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
     "published" BOOLEAN NOT NULL DEFAULT false,
-    "authorId" TEXT NOT NULL,
 
-    CONSTRAINT "Post_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Blog_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
